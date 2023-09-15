@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Age calculator app</title>
+
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+
+	<body>
+		<main>
+			<div class="card">
+				<form method="get">
+					<div class="input-item">
+						<label for="day">Day</label>
+						<br />
+						<input type="number" name="day" id="day" placeholder="DD" min="0" />
+						<p>Must be a valid date</p>
+						<p>This field is required</p>
+						<p>Must be a valid day</p>
+					</div>
+
+					<div class="input-item">
+						<label for="month">Month</label>
+						<br />
+						<input
+							type="number"
+							name="month"
+							id="month"
+							placeholder="MM"
+							min="0" />
+						<p>This field is required</p>
+						<p>Must be a valid month</p>
+					</div>
+
+					<div class="input-item">
+						<label for="year">Year</label>
+						<br />
+						<input
+							type="number"
+							name="year"
+							id="year"
+							placeholder="YYYY"
+							min="0" />
+						<p>This field is required</p>
+						<p>Must be in the past</p>
+					</div>
+
+					<button type="submit">
+						<img src="./assets/images/icon-arrow.svg" alt="" />
+					</button>
+				</form>
+
+				<hr />
+
+				<div class="results">
+					<p><span class="result">--</span> years</p>
+					<p><span class="result">--</span> months</p>
+					<p><span class="result">--</span> days</p>
+				</div>
+			</div>
+
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Roger Gonçalves</a>.
+			</div>
+		</main>
+
+		<script src="./assets/js/script.js"></script>
+	</body>
+</html>

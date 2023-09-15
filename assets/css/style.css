@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap");
+
+:root {
+	--color-purple: hsl(259, 100%, 65%);
+	--color-light-red: hsl(0, 100%, 67%);
+	--color-white: hsl(0, 0%, 100%);
+	--color-off-white: hsl(0, 0%, 94%);
+	--color-light-grey: hsl(0, 0%, 86%);
+	--color-smokey-grey: hsl(0, 1%, 44%);
+	--color-off-black: hsl(0, 0%, 8%);
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--color-off-black);
+	background-color: var(--color-off-white);
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	width: 650px;
+	background-color: var(--color-white);
+	padding: 40px;
+	border-radius: 15px 15px 100px 15px;
+}
+
+form {
+	position: relative;
+	display: flex;
+	gap: 5%;
+}
+
+.input-item {
+	width: 25%;
+	height: 130px;
+}
+
+.input-item p {
+	font-size: clamp(8px, 2vw, 11px);
+	font-weight: 400;
+	color: var(--color-light-red);
+	font-style: italic;
+	display: none;
+}
+
+.input-item label {
+	font-size: 13px;
+	color: var(--color-smokey-grey);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+input {
+	font-size: clamp(25px, 4vw, 30px);
+	font-weight: 800;
+	width: 100%;
+	padding: 10px 20px;
+	border: solid 1px var(--color-light-grey);
+	border-radius: 10px;
+	margin: 5px 0;
+}
+
+input:hover {
+	border: solid 1px var(--color-purple);
+}
+
+input::placeholder {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	color: var(--color-smokey-grey);
+}
+
+button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-purple);
+	height: 70px;
+	aspect-ratio: 1/1;
+	border: none;
+	border-radius: 50%;
+	padding: 20px;
+	transform: translateY(50%);
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--color-smokey-grey);
+}
+
+button:active {
+	transform: translateY(50%) scale(0.95);
+}
+
+button img {
+	height: 100%;
+}
+
+hr {
+	border: solid 1px var(--color-light-grey);
+}
+
+.results {
+	margin-top: 40px;
+}
+
+.results p {
+	font-size: clamp(65px, 8vw, 80px);
+	font-weight: 800;
+	font-style: italic;
+	line-height: 5rem;
+}
+
+.results p span {
+	color: var(--color-purple);
+}
+
+.incorrect p:nth-last-child(3),
+.empty p:nth-last-child(2),
+.wrong p:nth-last-child(1) {
+	display: block;
+}
+
+.incorrect input,
+.empty input,
+.wrong input {
+	border: solid 1px var(--color-light-red);
+}
+
+.incorrect label,
+.empty label,
+.wrong label {
+	color: var(--color-light-red);
+}
+
+.attribution {
+	margin-top: 10px;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 680px) {
+	.card {
+		width: 95%;
+	}
+
+	.input-item {
+		width: 30%;
+		height: 160px;
+	}
+
+	button {
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+
+	button:active {
+		transform: translate(50%, 50%) scale(0.95);
+	}
+
+	.results {
+		margin-top: 50px;
+	}
+}
